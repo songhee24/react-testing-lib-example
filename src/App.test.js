@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 
 describe("React Core Test", () => {
@@ -22,5 +22,11 @@ describe("React Core Test", () => {
     expect(helloWorldElem).toBeInTheDocument();
     expect(helloWorldElem).toHaveStyle({ color: "red" });
     screen.debug();
+  });
+
+  test("CLICK BTN", () => {
+    render(<App />);
+    const btn = screen.getByTestId("toggle-btn");
+    fireEvent.click(btn);
   });
 });
