@@ -17,8 +17,9 @@ describe("React Core Test", () => {
     render(<App />);
     // const helloWorldElem = screen.queryByText(/hello world2/i)
     // expect(helloWorldElem).toBeNull()
-    // screen.debug()
+    screen.debug();
     const helloWorldElem = await screen.findByText(/data/i);
     expect(helloWorldElem).toBeInTheDocument();
+    screen.debug();
   });
 });
