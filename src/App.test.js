@@ -9,4 +9,5 @@ test('renders hello world element', () => {
   expect(helloWorldElem).toBeInTheDocument();
   expect(buttonElem).toBeInTheDocument();
   expect(inputElem).toBeInTheDocument();
+  screen.debug()
 });
