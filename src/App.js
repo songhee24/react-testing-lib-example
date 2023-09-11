@@ -42,10 +42,10 @@ import AboutPage from "./pages/AboutPage";
 const App = () => {
   return (
     <BrowserRouter>
-      <Link to="/" data-testid={"main-link"}>
+      <Link to="/" data-testid="main-link">
         main
       </Link>
-      <Link to="/about" data-testid={"about-link"}>
+      <Link to="/about" data-testid="about-link">
         about
       </Link>
       <Routes>
