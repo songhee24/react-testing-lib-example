@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders hello world element 1`] = `
+<input
+  placeholder="input value..."
+  type="text"
+/>
+`;

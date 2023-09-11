@@ -8,6 +8,6 @@ test('renders hello world element', () => {
   const inputElem = screen.getByPlaceholderText(/input value/i);
   expect(helloWorldElem).toBeInTheDocument();
   expect(buttonElem).toBeInTheDocument();
-  expect(inputElem).toBeInTheDocument();
-  screen.debug()
+  expect(inputElem).toMatchSnapshot();
+  // screen.debug()
 });
