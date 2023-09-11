@@ -27,11 +27,11 @@ describe("React Core Test", () => {
   test("CLICK BTN", () => {
     render(<App />);
     const btn = screen.getByTestId("toggle-btn");
-    const toggleDiv = screen.queryByTestId("toggle-elem");
-    expect(toggleDiv).toBeNull();
+
+    expect(screen.queryByTestId("toggle-elem")).toBeNull();
     fireEvent.click(btn);
-    expect(toggleDiv).toBeInTheDocument();
+    expect(screen.queryByTestId("toggle-elem")).toBeInTheDocument();
     fireEvent.click(btn);
-    expect(toggleDiv).toBeNull();
+    expect(screen.queryByTestId("toggle-elem")).toBeNull();
   });
 });
