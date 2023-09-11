@@ -16,8 +16,10 @@ describe('React Core Test',  () => {
 
   test('screen methods', () => {
     render(<App />);
-    const helloWorldElem = screen.queryByText(/hello world2/i)
-    expect(helloWorldElem).toBeNull()
+    // const helloWorldElem = screen.queryByText(/hello world2/i)
+    // expect(helloWorldElem).toBeNull()
     // screen.debug()
+    const helloWorldElem = screen.findByText(/hello world2/i)
+    expect(helloWorldElem).toBeNull()
   });
 })

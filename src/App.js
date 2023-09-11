@@ -1,9 +1,20 @@
+import React, { useEffect } from "react";
+
 function App() {
+  const [data, setData] = React.useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setData({});
+    }, 500);
+  }, []);
+
   return (
     <div>
+      {data && <div>data</div>}
       <h1>Hello World</h1>
       <button>click me</button>
-      <input type='text' placeholder='input value...'/>
+      <input type="text" placeholder="input value..." />
     </div>
   );
 }
