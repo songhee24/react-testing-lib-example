@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div>
-      {data && <div>data</div>}
+      {data && <div style={{ color: "red" }}>data</div>}
       <h1>Hello World</h1>
       <button>click me</button>
       <input type="text" placeholder="input value..." />

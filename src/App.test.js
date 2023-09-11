@@ -20,6 +20,7 @@ describe("React Core Test", () => {
     screen.debug();
     const helloWorldElem = await screen.findByText(/data/i);
     expect(helloWorldElem).toBeInTheDocument();
+    expect(helloWorldElem).toHaveStyle({ color: "red" });
     screen.debug();
   });
 });
