@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import AboutPage from "./pages/AboutPage";
 // import Users from "./users/Users";
 
 // function App() {
@@ -40,7 +42,16 @@ import { BrowserRouter, Routes } from "react-router-dom";
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes></Routes>
+      <Link to="/" data-testid={"main-link"}>
+        main
+      </Link>
+      <Link to="/about" data-testid={"about-link"}>
+        about
+      </Link>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
     </BrowserRouter>
   );
 };
