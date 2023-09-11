@@ -3,7 +3,6 @@ import Users from "./Users";
 import axios from "axios";
 jest.mock("axios");
 describe("USERS TEST", () => {
-  const mockGet = jest.fn();
   let response;
 
   beforeEach(() => {
@@ -32,5 +31,6 @@ describe("USERS TEST", () => {
     expect(users.length).toBe(3);
     expect(axios.get).toBeCalledTimes(1);
     screen.debug();
+    expect(users).toMatchSnapshot();
   });
 });
