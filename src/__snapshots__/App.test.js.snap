@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`React Core Test renders hello world element 1`] = `
+<input
+  placeholder="input value..."
+  type="text"
+/>
+`;
+
 exports[`renders hello world element 1`] = `
 <input
   placeholder="input value..."
