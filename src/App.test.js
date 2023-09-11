@@ -27,6 +27,9 @@ describe("React Core Test", () => {
   test("CLICK BTN", () => {
     render(<App />);
     const btn = screen.getByTestId("toggle-btn");
+    const toggleDiv = screen.getByTestId("toggle-elem");
+    expect(toggleDiv).toBeNull();
     fireEvent.click(btn);
+    expect(toggleDiv).toBeInTheDocument();
   });
 });
