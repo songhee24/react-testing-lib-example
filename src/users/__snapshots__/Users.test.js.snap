@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`USERS TEST renders users test 1`] = `
+Array [
+  <a
+    data-testid="user-item"
+    href="/users/1"
+  >
+    Leanne Graham
+  </a>,
+  <a
+    data-testid="user-item"
+    href="/users/2"
+  >
+    Ervin Howell
+  </a>,
+  <a
+    data-testid="user-item"
+    href="/users/3"
+  >
+    Clementine Bauch
+  </a>,
+]
+`;

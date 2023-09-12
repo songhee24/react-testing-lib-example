@@ -1,5 +1,6 @@
 import React from "react";
 import AppRouter from "./router/AppRouter";
+import Navbar from "./components/Navbar";
 // import Users from "./users/Users";
 
 // function App() {
@@ -40,6 +41,7 @@ import AppRouter from "./router/AppRouter";
 const App = () => {
   return (
     <div>
+      <Navbar />
       <AppRouter />
     </div>
   );
