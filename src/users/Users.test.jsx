@@ -1,9 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Users from "./Users";
 import axios from "axios";
-import { MemoryRouter, Route, Routes } from "react-router-dom";
-import UserDetailsPage from "../pages/UserDetailsPage";
-import React from "react";
 import { renderWithRouter } from "../tests/helpers/renderWithRouter";
 jest.mock("axios");
 describe("USERS TEST", () => {
