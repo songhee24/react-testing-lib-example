@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import AppRouter from "./router/AppRouter";
 // import Users from "./users/Users";
 
@@ -41,15 +40,6 @@ import AppRouter from "./router/AppRouter";
 const App = () => {
   return (
     <div>
-      <Link to="/" data-testid="main-link">
-        main
-      </Link>
-      <Link to="/about" data-testid="about-link">
-        about
-      </Link>
-      <Link to="/users" data-testid="users-link">
-        about
-      </Link>
       <AppRouter />
     </div>
   );
