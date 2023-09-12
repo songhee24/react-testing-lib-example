@@ -34,4 +34,10 @@ describe("React Core Test", () => {
     fireEvent.click(btn);
     expect(screen.queryByTestId("toggle-elem")).toBeNull();
   });
+
+  test("INPUT EVENT", () => {
+    render(<App />);
+    const inputElem = screen.getByPlaceholderText(/input value/i);
+    expect(screen.queryByTestId("value-elem")).toHaveTextContent("");
+  });
 });
