@@ -1,9 +1,9 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Users from "./Users";
-import axios from "axios";
 
-jest.mock(axios);
+jest.mock("axios");
 describe("USERS TEST", () => {
+  const mockGet = jest.fn();
   let response;
 
   beforeEach(() => {
@@ -25,8 +25,12 @@ describe("USERS TEST", () => {
     };
   });
 
-  test("renders users", () => {
-    axios.get.mockReturnValue(response);
+  test("renders users", async () => {
+    mockGet.mockReturnValue(response);
     render(<Users />);
+    screen.debug();
+    const users = await screen.findAllByTestId("user-item");
+    expect(users.length).toBe(3);
+    expect(mockGet).toBeCalledTimes(1);
   });
 });

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Users from "./users/Users";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -29,6 +30,8 @@ function App() {
         type="text"
         placeholder="input value..."
       />
+
+      <Users />
     </div>
   );
 }
