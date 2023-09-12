@@ -39,5 +39,9 @@ describe("React Core Test", () => {
     render(<App />);
     const inputElem = screen.getByPlaceholderText(/input value/i);
     expect(screen.queryByTestId("value-elem")).toHaveTextContent("");
+    fireEvent.input(inputElem, {
+      target: { value: "123123" },
+    });
+    expect(screen.queryByTestId("value-elem")).toHaveTextContent("123123");
   });
 });
