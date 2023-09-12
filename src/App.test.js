@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
+import userEvent from "@testing-library/user-event";
 
 describe("React Core Test", () => {
   test("renders hello world element", () => {
@@ -39,9 +40,12 @@ describe("React Core Test", () => {
     render(<App />);
     const inputElem = screen.getByPlaceholderText(/input value/i);
     expect(screen.queryByTestId("value-elem")).toHaveTextContent("");
-    fireEvent.input(inputElem, {
-      target: { value: "123123" },
-    });
+    // Исскуственное событие
+    // fireEvent.input(inputElem, {
+    //   target: { value: "123123" },
+    // });
+    // Близко к пользователю, обрабатываются события нажатия клавиш
+    userEvent.type(inputElem, "123123");
     expect(screen.queryByTestId("value-elem")).toHaveTextContent("123123");
   });
 });
