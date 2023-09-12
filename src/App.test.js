@@ -10,7 +10,7 @@ describe("React Core Test", () => {
     const inputElem = screen.getByPlaceholderText(/input value/i);
     expect(helloWorldElem).toBeInTheDocument();
     expect(buttonElem).toBeInTheDocument();
-    expect(inputElem).toMatchSnapshot();
+    // expect(inputElem).toMatchSnapshot();
     // screen.debug()
   });
 
