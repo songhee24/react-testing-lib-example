@@ -6,7 +6,7 @@ function App() {
   const [value, setValue] = React.useState("");
 
   const toggleHandler = () => setToggle((prevState) => !prevState);
-  const changeHandler = () => setToggle((prevState) => !prevState);
+  const changeHandler = (e) => setValue(e.target.value);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,7 +23,12 @@ function App() {
       <button data-testid="toggle-btn" onClick={toggleHandler}>
         click me
       </button>
-      <input type="text" placeholder="input value..." />
+      <input
+        value={value}
+        onChange={changeHandler}
+        type="text"
+        placeholder="input value..."
+      />
     </div>
   );
 }
