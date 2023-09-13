@@ -1,14 +1,19 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Counter from "./Counter";
-import userEvent from "@testing-library/user-event";
+import { Provider } from "react-redux";
+import { createReduxStore } from "../../store/store";
 
 describe("Counter test", () => {
-  test("router", () => {
-    render(<Counter />);
+  test("click test", () => {
+    render(
+      <Provider store={createReduxStore()}>
+        <Counter />
+      </Provider>
+    );
     const incrementBtn = screen.getByTestId("increment-btn");
 
     expect(screen.getByTestId("value-title")).toHaveTextContent("0");
-    userEvent.click(incrementBtn);
+    fireEvent.click(incrementBtn);
     expect(screen.getByTestId("value-title")).toHaveTextContent("1");
   });
 });
