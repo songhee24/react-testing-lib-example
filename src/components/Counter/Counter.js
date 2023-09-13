@@ -1,12 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
+import { getCounterValue } from "../../store/selectors/getCounterValue/getCounterValue";
+import { decrement, increment } from "../../store/reducers/counterReducer";
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const value = useSelector();
+  const value = useSelector(getCounterValue);
 
-  const onDecrement = () => {};
+  const onDecrement = () => {
+    dispatch(decrement());
+  };
 
-  const onIncrement = () => {};
+  const onIncrement = () => {
+    dispatch(increment());
+  };
 
   return (
     <div>
@@ -16,3 +22,5 @@ const Counter = () => {
     </div>
   );
 };
+
+export default Counter;
