@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getCounterValue } from "../../store/selectors/getCounterValue/getCounterValue";
+import { getCounterValue } from "../../store/reducers/selectors/getCounterValue/getCounterValue";
 import { decrement, increment } from "../../store/reducers/counterReducer";
 
 const Counter = () => {
