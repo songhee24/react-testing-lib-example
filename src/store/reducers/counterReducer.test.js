@@ -1,4 +1,4 @@
-import { counterReducer, increment } from "./counterReducer";
+import counterReducer, { increment } from "./counterReducer";
 
 describe("getCounterValue", () => {
   test("should handle initial state", () => {
