@@ -6,6 +6,7 @@ import Users from "../components/users/Users";
 import UserDetailsPage from "../pages/UserDetailsPage";
 import ErrorPage from "../pages/ErrorPage";
 import HelloWorld from "../pages/HelloWorld";
+import UserForTests from "../components/usersForTests/UserForTests";
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
       <Route path="/hello" element={<HelloWorld />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/users" element={<Users />} />
+      <Route path="/users-test" element={<UserForTests />} />
       <Route path="/users/:id" element={<UserDetailsPage />} />
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
