@@ -24,6 +24,28 @@ class UsersPage extends Page {
     }
   }
 
+  async deleteUser() {
+    try {
+      const usersCount = await this.usersItems.length;
+
+      if (!usersCount) {
+        throw new Error("Пользователи не найдены");
+      }
+
+      await this.usersItems[0].$("#user-delete").click();
+
+      const usersCountAfterDelete = await this.usersItems.length;
+
+      if (usersCount - usersCountAfterDelete !== 1) {
+        throw new Error(
+          "Удаление не произошло или удалился более чем 1 пользователь"
+        );
+      }
+    } catch (e) {
+      throw new Error("Не удалось удалить пользователя. " + e.message);
+    }
+  }
+
   open(path) {
     return super.open("users-test");
   }
