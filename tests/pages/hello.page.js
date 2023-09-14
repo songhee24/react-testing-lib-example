@@ -6,7 +6,7 @@ class HelloPage extends Page {
     return $("#toggle");
   }
 
-  get input() {
+  get searchInput() {
     return $("#search");
   }
 
@@ -14,10 +14,9 @@ class HelloPage extends Page {
     return $("#hello");
   }
 
-  async toggleTitleWithInput(username, password) {
-    await this.inputUsername.setValue(username);
-    await this.inputPassword.setValue(password);
-    await this.btnSubmit.click();
+  async toggleTitleWithInput(text) {
+    await this.searchInput.setValue(text);
+    await this.toggleBtn.click();
   }
 
   open() {
