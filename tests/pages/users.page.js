@@ -1,5 +1,5 @@
 const Page = require("./page");
-
+const { $ } = require("@wdio/globals");
 class UsersPage extends Page {
   get loadingTitle() {
     return $("#users-loading");
