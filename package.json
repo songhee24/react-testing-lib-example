@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "test:e2e": "npx wdio run ./wdio.conf.js"
   },
   "eslintConfig": {
     "extends": [
