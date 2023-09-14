@@ -25,7 +25,7 @@ class UsersPage extends Page {
   }
 
   open(path) {
-    return super.open("/users-test");
+    return super.open("users-test");
   }
 }
 
