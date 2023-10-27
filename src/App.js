@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
 // import Users from "./users/Users";
@@ -41,7 +41,7 @@ import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <div>
       <Link to="/" data-testid="main-link">
         main
       </Link>
@@ -52,7 +52,7 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
-    </BrowserRouter>
+    </div>
   );
 };
 
