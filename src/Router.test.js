@@ -17,4 +17,13 @@ describe("TEST ROUTER APP", () => {
     fireEvent.click(mainLink);
     expect(screen.getByTestId("main-page")).toBeInTheDocument();
   });
+
+  test("Error page test", () => {
+    render(
+      <MemoryRouter initialEntries={["/ssdf"]}>
+        <App />
+      </MemoryRouter>
+    );
+    expect(screen.getByTestId("not-found-page")).toBeInTheDocument();
+  });
 });
